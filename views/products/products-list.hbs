@@ -1,0 +1,9 @@
+{{#each products}}
+<a href="/products/{{this._id}}">
+<div>
+    <h1>{{this.title}}</h1>
+    <h2>{{this.price}}</h2>
+    <img src="{{this.picture}}" alt="default">
+</div>
+</a>
+{{/each}}

@@ -1,0 +1,11 @@
+<div>
+    <h1>{{this.title}}</h1>
+    <h2>{{this.price}}</h2>
+    <img src="{{this.picture}}" alt="default">
+    <form action="/products/{{this._id}}/delete" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+    <form action="/update" method="POST">
+        <button type="submit">update</button>
+    </form>
+</div>
