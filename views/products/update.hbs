@@ -1,0 +1,12 @@
+<form action="/products/{{productFromDB._id}}/update" method="POST">
+    <h1>Update the product</h1>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="{{productFromDB.title}}" placeholder="Enter your title:">
+    <label for="price">Price:</label>
+    <input type="number" name="price" id="price" value="{{productFromDB.price}}">
+    <label for="picture">Choose picture:</label>
+    <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" />
+    <label for="description">description</label>
+    <input type="textarea" id="description" name="description" value="{{productFromDB.title}}">
+    <button type="submit">Update product</button>
+</form>

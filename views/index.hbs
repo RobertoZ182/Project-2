@@ -1,2 +1,14 @@
-<h1>{{appTitle}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
+
+<h1>Group Media Website 🚀</h1>
+<p>Welcome!</p>
+<h1>Our Products</h1>
+<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 50px;">
+{{#each productsFromDB}}
+<div style="border: 2px solid #1ca6dd;">
+    <h1>{{this.title}}</h1>
+    <h1>{{this.price}}</h1>
+    <p>{{this.description}}</p>
+</div>
+{{/each}}
+</div>
+<a href="/products" id="link-btn">See all our productsFromDB</a>

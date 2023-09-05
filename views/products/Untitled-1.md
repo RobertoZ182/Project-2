@@ -15,8 +15,8 @@ Requirements:
      [x] Read
          - list
          - details
-     [ ] update
-     [ ] delete
+     [x ] update
+     [x] delete
 
 
 *** MVP ***

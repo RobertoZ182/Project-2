@@ -5,7 +5,6 @@ const Product = new Schema({
     picture: String,
     price: Number,
     description: String
-    
 },
 {
     timestamps: true

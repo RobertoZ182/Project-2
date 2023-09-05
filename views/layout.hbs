@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    {{#if user}}
+    <header id="navbar">
+      <p>{{user.username}}</p>
+      <a href="/auth/logout">logout</a>
+    </header>
+    {{else}}
+    <header id="navbar">
+      <a href="/auth/signup">Signup</a>
+      <a href="/auth/login">Login</a>
+    </header>
+    {{/if}}
 
     {{{body}}}
 

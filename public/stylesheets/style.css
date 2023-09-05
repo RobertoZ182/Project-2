@@ -4,9 +4,34 @@ body {
 }
 
 a {
-  color: #00b7ff;
+  color: #1ca6dd;
 }
 
 h1 {
   color: 15px;
+}
+
+#navbar{
+  background-color: #1ca6dd;
+  height: 80px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+#navbar a{
+  text-decoration: none;
+  color: white;
+}
+
+#link-btn{
+  background-color: #1ca6dd;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
 }
