@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+const fileUploader = require('../config/cloudinary.config');
 const Product = require("../models/Product.model");
 const isLoggedIn = require('../middleware/isLoggedIn');
 const isLoggedOut = require('../middleware/isLoggedOut');
@@ -57,9 +58,9 @@ router.get("/products", (req, res, next) => {
     res.render("products/create-product");
   })
   
-  router.post("/create",isLoggedIn, (req, res, next) => {
-    const {title, price, description, picture} = req.body;
-    Product.create({title, price, description, picture})
+  router.post("/create",isLoggedIn, fileUploader.single('picture'), (req, res, next) => {
+    const {title, price, description} = req.body;
+    Product.create({title, price, description, picture: req.file.path})
       .then(() => {
         res.redirect("/products");
       })
