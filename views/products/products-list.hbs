@@ -1,10 +1,11 @@
 <div style="border-radius: 25px; padding: 20px;">
 {{#each products}}
-<a href="/products/{{this._id}}" id="link-cont">
+<a href="/products/{{this._id}}" id="link-cont" sty>
 <div>
     <h1>{{this.title}}</h1>
-    <h2>{{this.price}}</h2>
+    <h2>Price:{{this.price}}$</h2>
     <img src="{{this.picture}}" alt="default">
+    <p>Seller: {{this.seller.username}}</p>
 </div>
 </a>
 {{/each}} 

@@ -2,10 +2,16 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-image: url("../images/fancy-cushion.webp");
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a {
-  color: #1ca6dd;
+  color: #db880c;
 }
 
 h1 {
@@ -13,14 +19,14 @@ h1 {
 }
 
 #navbar{
-  background-color: #1ca6dd;
+  background-color: #db880c;
   height: 80px;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
   padding: 10px;
   gap: 10px;
 }
@@ -31,7 +37,7 @@ h1 {
 }
 
 #link-btn{
-  background-color: #1ca6dd;
+  background-color: #db880c;
   color: white;
   text-decoration: none;
   padding: 5px;
@@ -51,6 +57,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 #signup, #login, #create, #update{
@@ -59,11 +66,13 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  border: 3px solid #1ca6dd;
-  box-shadow: 0 0 5px 5px #1ca6dd; 
+  border: 3px solid #db880c;
+  box-shadow: 0 0 5px 5px #db880c; 
   padding: 20px;
   border-radius: 20px;
-  text-align: center;
+  text-align: center; 
+  background-color: black;
+  color: white;
 }
 
 #signup input, #login input, #create input, #update input{
@@ -80,7 +89,7 @@ h1 {
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: #1ca6dd;
+  background-color: #db880c;
 }
 
 #link-cont{
@@ -90,15 +99,31 @@ h1 {
   padding: 20px;
 }
 #link-cont div{
-  border: 2px solid #1ca6dd;
+  border: 2px solid #db880c;
   border-bottom: none;
   border-right: none;
   padding: 20px;
+  background-color: white;
+  margin-bottom: 20px; 
 }
 
-#title-price-container, #picture-description-container, #buttons-container{
+#product-details{
+  text-align: center;
+  background-color: #db880c;
+  width: 50vw;
+  height: auto;
+  margin: 100px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 10px #db880c;
+}
+
+#product-details #title-price-container{
+text-align: left;
+font-style: bold; 
+}
+
+#product-details #seller-location-container{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  gap: 50px;
 }
