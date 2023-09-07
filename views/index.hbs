@@ -1,15 +1,41 @@
 
-<h1>Group Media Website 🚀</h1>
-<p>Welcome!</p>
-<h1>Our Products</h1>
+<div style="text-align: center;">
+    <h1>Group Media</h1>
+    <p>Welcome!</p>
+    <h1>Our Products</h1>   
+</div>
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="../public/images/194973l-1000x640-b-4906f49f.jpeg" class="d-block w-100" alt="default">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="../public/images/19699-MC20Cielo.webp" class="d-block w-100" alt="default">
+    </div>
+    <div class="carousel-item">
+      <img src="../public/images/597383l-1000x640-b-917ca853.jpeg" class="d-block w-100" alt="default">
+    </div>
+    <div class="carousel-item">
+      <img src="../public/images/ferrari-296-gt3-sketch-1.jpeg" class="d-block w-100" alt="default">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 50px; background-color:#1ca6dd;">
-{{#each productsFromDB}}
+{{#if productsFromDB}}
 <div style="border: 2px solid #1ca6dd;">
     <img src="{{this.picture}}" alt="default">
     <h1>{{this.title}}</h1>
     <h1>{{this.price}}</h1>
     <p>{{this.description}}</p>
 </div>
-{{/each}}
+{{/if}}
 </div>
 <div id="btn-container"><a href="/products" id="link-btn">See all our productsFromDB</a></div>

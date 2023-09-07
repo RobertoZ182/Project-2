@@ -7,7 +7,7 @@ const isLoggedOut = require('../middleware/isLoggedOut');
 /* GET home page */
 
 router.get("/", (req, res, next) => {
-  Product.find()
+  Product.find({title: "Audi"})
    .then((products) => {
       res.render("index", {productsFromDB: products});
    })

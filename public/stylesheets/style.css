@@ -18,7 +18,7 @@ h1 {
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   border-radius: 20px;
   padding: 10px;
@@ -93,6 +93,7 @@ h1 {
   border: 2px solid #1ca6dd;
   border-bottom: none;
   border-right: none;
+  padding: 20px;
 }
 
 #title-price-container, #picture-description-container, #buttons-container{
