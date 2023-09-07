@@ -30,12 +30,22 @@ h1 {
   padding: 10px;
   gap: 10px;
 }
+#navbar #list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
 #navbar a{
   text-decoration: none;
   color: white;
 }
 
+#navbar #list a:hover{
+  background-color: black;
+}
 #link-btn{
   background-color: #db880c;
   color: white;
@@ -104,7 +114,9 @@ h1 {
   border-right: none;
   padding: 20px;
   background-color: white;
-  margin-bottom: 20px; 
+  width: 60vw;
+  height: 50vh;
+  margin: 30px auto;
 }
 
 #product-details{
@@ -126,4 +138,27 @@ font-style: bold;
   display: flex;
   flex-direction: row;
   gap: 50px;
+}
+
+#content-home{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+}
+#content-home a{
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+}
+#content-home a:hover{
+  opacity: 0.6;
+}
+#content-home #product-btn{
+  border: none;
+  width: 100%;
+  height: auto;
+  background-color: #db880c;
+  border-radius: 10px;
 }

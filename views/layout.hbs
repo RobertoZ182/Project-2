@@ -15,11 +15,14 @@
       <div>
         <h1>GROUPMEDIA-CARS</h1>
       </div>
-      <div>
-        <p>{{user.username}}</p>
-        <a href="/create">Upload product</a>
-        <a href="/auth/logout">Logout</a>
-      </div>
+       <p>{{user.username}}</p>
+       <nav>
+        <ul id="list">
+          <a href="/products"><li style="list-style: none;">View products</li></a>
+          <a href="/create"><li style="list-style: none;">Upload product</li></a>
+          <a href="/auth/logout"><li style="list-style: none;">Logout</li></a>
+        </ul>
+       </nav>
     </header>
     {{else}}
     <header id="navbar">

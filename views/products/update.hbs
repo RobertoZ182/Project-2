@@ -1,5 +1,5 @@
 <div id="update-form">
-    <h1>Update the product</h1>
+    <h1 style="color: white;">Update the product</h1>
     <form id="update"action="/products/{{productFromDB._id}}/update" method="POST">
     <label for="title">Title:<input type="text" id="title" name="title" value="{{productFromDB.title}}" placeholder="Enter your title:"></label>
     <label for="price">Price:<input type="number" name="price" id="price" value="{{productFromDB.price}}"></label>
