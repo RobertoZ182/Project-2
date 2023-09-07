@@ -1,9 +1,22 @@
 <div id="product-details">
-    <h1>{{this.title}}</h1>
-    <h2>{{this.price}}</h2>
-    <img src="{{this.picture}}" alt="default">
-    <form action="/products/{{this._id}}/delete" method="POST">
-        <button type="submit">Delete</button>
-    </form>
+    <div id="title-price-container">
+        <h1>{{this.title}}</h1>
+        <h2>{{this.price}}</h2>
+    </div>
+    <div id="picture-description-container">
+        <img src="{{this.picture}}" alt="default">
+        <div>
+            <h3>Description:</h3>
+            <p>{{this.description}}</p>   
+        </div>
+    </div>
+    <p>selled by {{this.seller.username}}</p>
+    {{#if user}}
+    <div id="buttons-container">
+        <form action="/products/{{this._id}}/delete" method="POST">
+            <button type="submit">Delete</button>
+        </form>
         <a href="/products/{{this._id}}/update"><button>update</button></a>
+    </div>
+    {{/if}}
 </div>

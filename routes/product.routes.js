@@ -17,6 +17,7 @@ router.get("/products", (req, res, next) => {
   
   router.get("/products/:productId", (req, res, next) =>{
     Product.findById(req.params.productId)
+      .populate('seller')
       .then(productFromDB => {
         res.render("products/product", productFromDB)
       }) 
@@ -59,8 +60,9 @@ router.get("/products", (req, res, next) => {
   })
   
   router.post("/create",isLoggedIn, fileUploader.single('picture'), (req, res, next) => {
-    const {title, price, description} = req.body;
-    Product.create({title, price, description, picture: req.file.path})
+    const {title, price, description, location} = req.body;
+    const seller = req.session.currentUser._id;
+    Product.create({title, price, description, picture: req.file.path, seller, location})
       .then(() => {
         res.redirect("/products");
       })

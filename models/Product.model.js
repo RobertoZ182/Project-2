@@ -4,7 +4,12 @@ const Product = new Schema({
     title: String,
     picture: String,
     price: Number,
-    description: String
+    description: String,
+    location: String,
+    seller: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    }
 },
 {
     timestamps: true
