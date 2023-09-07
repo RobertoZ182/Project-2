@@ -1,10 +1,10 @@
 <div id="update-form">
     <h1 style="color: white;">Update the product</h1>
-    <form id="update"action="/products/{{productFromDB._id}}/update" method="POST">
+    <form id="update"action="/products/{{productFromDB._id}}/update" method="POST" enctype="multipart/form-data">
     <label for="title">Title:<input type="text" id="title" name="title" value="{{productFromDB.title}}" placeholder="Enter your title:"></label>
     <label for="price">Price:<input type="number" name="price" id="price" value="{{productFromDB.price}}"></label>
     <label for="picture">Choose picture:<input type="file" id="picture" name="picture" accept="image/png, image/jpeg" /></label>
-    <label for="description">Description: <input type="textarea" id="description" name="description" value="{{productFromDB.title}}"></label>
+    <label for="description">Description: <input type="textarea" id="description" name="description" value="{{productFromDB.description}}"></label>
     <label for="location">Location<input type="text" id="location" name="location" value="{{productFromDB.location}}"></label>
     <button type="submit">Update product</button>
 </form>

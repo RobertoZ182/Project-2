@@ -41,15 +41,18 @@ router.get("/products", (req, res, next) => {
           
   })
 
-  router.post("/products/:productId/update",isLoggedIn, (req, res, next) => {
+  router.post("/products/:productId/update",isLoggedIn, fileUploader.single('picture'), (req, res, next) => {
     console.log(req.body);
     console.log(req.params);
-    const {title, price, description, picture} = req.body;
-    if(!title || !price || !description || !picture){
+    const seller = req.session.currentUser._id;
+    const picture = req.file.path; 
+    const {title, price, description, location} = req.body;
+
+    if(!title || !price || !description || !picture || !location){
       res.send("All the fields are mandatory. Please enter all the required information!");
     }
     
-    Product.findByIdAndUpdate(req.params.productId, {title, price, description, picture}, {new: true})
+    Product.findByIdAndUpdate(req.params.productId, {title, price, description, picture, seller, location}, {new: true})
       .then(() => {
         res.redirect("/products");
       })
