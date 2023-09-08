@@ -10,3 +10,10 @@ Logged in users:
 - update products
 - delete products
 
+Description
+The project represents a small platform for selling cars, where each user has the chance to upload his offer
+Instructions to run this app in my computer
+how to install dependencies (`npm install`)
+environment variables: we have different environment variables which we need for the cloudinary images system  
+Demo
+Link to the deployed version https://group-media.adaptable.app/
